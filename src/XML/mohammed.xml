@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profil>
+        
+    <nom>mohammed</nom>
+        
+    <avatar>mohammed.jpg</avatar>
+        
+    <anniversaire/>
+        
+    <parties>
+        <partie date="2023-12-01" trouve="100">
+            <temps>18.0</temps>
+            <mot niveau="4">serenade</mot>
+        </partie>
+    </parties>
+    
+</profil>

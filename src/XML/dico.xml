@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Structure XML représentant un dictionnaire de mots avec différents niveaux -->
+
+<dictionnaire 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.univ.fr/Dico"
+    xs:schemaLocation="http://www.univ.fr/Dico ./dico.xsd">
+
+    <!-- Section contenant les mots classés par niveaux -->
+    <mots>
+        <!-- Niveau 1 -->
+        <mot niveau="1">chat</mot>
+        <mot niveau="1">maison</mot>            
+        <mot niveau="1">soleil</mot>
+        <mot niveau="1">plage</mot>      
+
+        <!-- Niveau 2 -->
+        <mot niveau="2">pomme</mot>            
+        <mot niveau="2">bibliotheque</mot>            
+        <mot niveau="2">electricite</mot>            
+        <mot niveau="2">vacances</mot>            
+
+        <!-- Niveau 3 -->
+        <mot niveau="3">telephone</mot>            
+        <mot niveau="3">sismographe</mot>            
+        <mot niveau="3">technologie</mot>            
+        <mot niveau="3">papillon</mot>
+
+        <!-- Niveau 4 -->
+        <mot niveau="4">interpidite</mot>            
+        <mot niveau="4">fantasmagorie</mot>            
+        <mot niveau="4">serenade</mot>            
+        <mot niveau="4">hippopotame</mot>
+
+        <!-- Niveau 5 -->
+        <mot niveau="5">perpendiculaire</mot>            
+        <mot niveau="5">cacophonie</mot>            
+        <mot niveau="5">intrigant</mot>            
+        <mot niveau="5">metamorphose</mot>
+    </mots>  
+</dictionnaire>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- Définition du schéma XML pour représenter la structure du dictionnaire -->
+
+<xs:schema version="1.0"
+            targetNamespace="http://www.univ.fr/Dico"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:dico="http://www.univ.fr/Dico"
+            elementFormDefault="qualified">
+
+    <!-- Élément racine du schéma -->
+    <xs:element name="dictionnaire" type="dico:Dictionnaire"/>
+
+    <!-- Définition du type complexe pour l'élément 'Dictionnaire' -->
+    <xs:complexType name="Dictionnaire">
+        <xs:sequence>
+            <!-- Élément 'mots' contenant une séquence d'éléments de type 'Mots' -->
+            <xs:element name="mots" type="dico:Mots"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Définition du type complexe pour l'élément 'Mots' -->
+    <xs:complexType name="Mots">
+        <xs:sequence>
+            <!-- Élément 'mot' contenant une séquence d'éléments de type 'Mot' (répétable) -->
+            <xs:element name="mot" type="dico:Mot" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Définition du type complexe pour l'élément 'Mot' -->
+    <xs:complexType name="Mot">
+        <xs:simpleContent>
+            <!-- Extension de la base 'string' avec un attribut 'niveau' de type 'Niveau' -->
+            <xs:extension base="xs:string">
+                <xs:attribute name="niveau" type="dico:Niveau"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Définition du type simple pour l'attribut 'Niveau' -->
+    <xs:simpleType name="Niveau">
+        <!-- Restriction de la base 'int' avec une valeur de pattern entre 1 et 5 -->
+        <xs:restriction base="xs:int">
+            <xs:pattern value="[1-5]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+

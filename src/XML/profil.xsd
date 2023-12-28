@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+    Schéma XML pour définir la structure d'un profil utilisateur dans le contexte du jeu Tux Letter Game.
+    Ce schéma inclut un autre schéma (dico.xsd) pour la structure du dictionnaire utilisé dans le jeu.
+-->
+
+<xs:schema  version="1.0"
+            targetNamespace="http://www.univ.fr/Dico"
+            xmlns:tux="http://www.univ.fr/Dico"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <!-- Inclusion du schéma du dictionnaire -->
+    <xs:include schemaLocation="dico.xsd"/>
+
+    <!-- Élément racine du schéma, représentant un profil utilisateur -->
+    <xs:element name="profil" type="tux:Profil"/>
+
+    <!-- Définition du type complexe 'Profil' -->
+    <xs:complexType name="Profil">
+        <xs:sequence>
+            <!-- Éléments composant le profil -->
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="avatar" type="tux:image_avatar"/>
+            <xs:element name="anniversaire" type="xs:date"/>
+            <xs:element name="parties" type="tux:Parties"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Définition du type simple 'image_avatar' avec restriction sur l'extension du fichier -->
+    <xs:simpleType name="image_avatar">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+\.(jpg|png|jpeg|gif)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Définition du type complexe 'Parties' contenant une séquence de parties -->
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" type="tux:Partie" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Définition du type complexe 'Partie' représentant une partie jouée -->
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <!-- Éléments composant une partie -->
+            <xs:element name="temps" type="xs:double" minOccurs="0"/>
+            <xs:element name="mot" type="tux:Mot"/>
+        </xs:sequence>
+        <!-- Attributs spécifiant la date de la partie et le taux de réussite -->
+        <xs:attribute name="date" type="xs:date" use="required"/>
+        <xs:attribute name="trouvé" type="tux:taux_reussite"/>
+    </xs:complexType>
+
+    <!-- Définition du type simple 'taux_reussite' avec restriction sur le format du taux -->
+    <xs:simpleType name="taux_reussite">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{1,2}\%"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+

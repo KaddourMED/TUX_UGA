@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profil>
+        
+    <nom>lyna</nom>
+        
+    <avatar>lyna.jpg</avatar>
+        
+    <anniversaire/>
+        
+    <parties>
+        <partie date="2023-12-01" trouve="46">
+            <temps>30.0</temps>
+            <mot niveau="5">perpendiculaire</mot>
+        </partie>
+    </parties>
+    
+</profil>

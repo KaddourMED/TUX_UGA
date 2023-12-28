@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="../XSLT/profil.xsl"?>
+<!-- Profil utilisateur conformément au schéma défini dans profil.xsd -->
+
+<profil xmlns="http://www.univ.fr/Dico" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.univ.fr/Dico ./profil.xsd">
+
+    <!-- Informations de profil -->
+    <nom>Alban</nom>
+    <avatar>conan.jpg</avatar>
+    <anniversaire>2006-05-08</anniversaire>
+    
+    <!-- Historique des parties jouées -->
+    <parties>
+        <!-- Première partie jouée -->
+        <partie date="2013-12-10">
+            <temps>20.0</temps>
+            <mot niveau="1">cle</mot>
+        </partie>
+
+        <!-- Deuxième partie jouée avec un taux de réussite de 75% -->
+        <partie date="2013-12-11" trouvé="75%">
+            <temps>20.0</temps>
+            <mot niveau="2">indice</mot>
+        </partie>
+
+        <!-- Troisième partie jouée -->
+        <partie date="2013-12-11">
+            <temps>20.0</temps>
+            <mot niveau="2">indice</mot>
+        </partie>
+    </parties>
+</profil>
+

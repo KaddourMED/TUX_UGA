@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration du plateau de jeu pour le Tux Letter Game -->
+
+<plateau>
+    
+    <!-- Dimensions du plateau -->
+    <dimensions>
+        <!-- Hauteur du plateau -->
+        <height>
+            100
+        </height>
+        
+        <!-- Largeur du plateau -->
+        <width>
+            40
+        </width>
+        
+        <!-- Profondeur du plateau -->
+        <depth>
+            50
+        </depth>
+    </dimensions>
+    
+    <!-- Mapping des textures pour les côtés du plateau -->
+    <mapping>
+        <!-- Texture pour le bas du plateau -->
+        <textureBottom>
+            textures/floor/grass2.png
+        </textureBottom>
+        
+        <!-- Texture pour la face est du plateau -->
+        <textureEast>
+            textures/skybox/interstellar/east.png
+        </textureEast>
+        
+        <!-- Texture pour la face ouest du plateau -->
+        <textureWest>
+            textures/skybox/interstellar/west.png
+        </textureWest>
+        
+        <!-- Texture pour la face nord du plateau -->
+        <textureNorth>
+            textures/skybox/interstellar/north.png
+        </textureNorth>
+    </mapping>
+    
+    <!-- URL de la représentation du pion sur le plateau -->
+    <pion>
+        une url
+    </pion>
+    
+</plateau>
+
